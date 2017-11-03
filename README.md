@@ -111,6 +111,7 @@ Check out the [examples](examples) for more details of the basic, advanced, adva
 - `debugLevel`: default: 0 - level 1 will log sent messages, level 2 will also log received messages
 - `replyTimeOutInterval`: default: 3000 milliseconds - publisher timeout waiting for replies
 - `standalone`: default: false - If true, close the connection on finish, otherwise just close the channel.
+- `reuseChannel`: default: false - If true, reuse a single channel, otherwise each publish creates a new channel which is closed after a response is received or a timeout occurs.
 - `url`: default: 'localhost' - [A valid amqp URI](https://www.rabbitmq.com/uri-spec.html).
 - `socketOptions`: default empty Object - The socket options will be passed to the socket library (net or tls). The socket options may also include the key noDelay, with a boolean value. If the value is true, this sets TCP_NODELAY on the underlying socket.
 - `queue`: default: 'node_rpc_queue'
